@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(#b068e9, #6463e7);
+  width: 100%;
+  height: 100vh;
+}
+
+:root {
+  --active-color: #1e1f36;
+  --border-color: #e8e8ea;
+  --subtext: #787887;
+  --letters: #4b4c5f;
+}
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+.accordion {
+  margin-top: 148px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 10px;
+  font-family: "Kumbh Sans", sans-serif;
+  margin-bottom: 85px;
+}
+
+.img__block {
+  position: absolute;
+  top: -111px;
+  left: 10px;
+
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.main__img {
+  position: absolute;
+  top: 67px;
+  left: 27px;
+  z-index: 5;
+}
+
+.main__hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.faq__content {
+  padding: 132px 24px 48px 24px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.faq__h1 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1e1f36;
+  margin-bottom: 38px;
+}
+
+.item__h5 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #4b4c5f;
+  text-align: left;
+  transition: all 0.5s;
+}
+
+.title__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list__item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 1px 11px 1px;
+  border-bottom: 1px solid #e8e8ea;
+}
+
+.item__arrow {
+  transition: transform 0.5s;
+}
+
+.item__arrow.active {
+  transform: rotate(180deg);
+}
+
+.subtext {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #787887;
+  text-align: left;
+}
+
+.subtext__box.active {
+  transition: all 0.9s;
+}
+
+.none {
+  display: none;
+}
+
+.square {
+  display: none;
+}
+.shedow__desktop {
+  display: none;
+}
+
+@media screen and (width > 375px) {
+  .faq__h1 {
+    text-align: left;
+  }
+  .faq__content {
+    padding: 0;
+    padding-top: 65px;
+    width: 350px;
+  }
+  .accordion {
+    padding: 0 111px 85px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 48px;
+    margin-bottom: 130px;
+  }
+  .img__block {
+    top: 49px;
+    left: -1px;
+  }
+  .shedow__desktop,
+  .hero__desktop,
+  .square {
+    position: absolute;
+    display: block;
+  }
+
+  .square {
+    top: 129px;
+    left: -92px;
+  }
+
+  .main__hero,
+  .main__img {
+    display: none;
+  }
+
+  .shedow__desktop {
+    position: absolute;
+    top: -49px;
+    bottom: 0;
+  }
+}
